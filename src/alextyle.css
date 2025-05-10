@@ -1,0 +1,224 @@
+/*
+  Cristian Alexei Romero Martinez
+  Ingeniería en Sistemas Computacionales
+*/
+
+/*	Setting names, values, sizes, fonts, etc.	*/
+html {
+	font-family: Roboto, Consolas, monospace;
+	font-size: 2vh;
+}
+
+body {
+	min-height: 100vh;
+	background-image: radial-gradient(#333, black);
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+
+.full-viewport {
+	height: 100vh !important;
+	width: 100vw !important;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.f-x {
+	width: 100%;
+}
+
+.f-y {
+	height: 100%;
+}
+
+/*	Titles	*/
+.hyper-title {
+	transform: rotate(-5deg) skew(-5deg, 0);
+}
+
+h1 {
+	font-size: 5vh;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 1vh;
+	margin: 0;
+}
+
+h2 {
+	font-size: 4.25vh;
+	text-align: center;
+	padding: 1vh;
+	margin: 0;
+}
+
+h3 {
+	font-size: 3.5vh;
+	text-align: left;
+	padding: 1vh;
+	margin: 0;
+}
+
+h4 {
+	font-size: 3vh;
+	text-align: left;
+	padding: 1vh;
+	margin: 0;
+}
+
+h5 {
+	font-size: 2.5vh;
+	text-align: left;
+	padding: 1vh;
+	margin: 0;
+}
+
+h6 {
+	font-size: 2.25vh;
+	text-align: left;
+	padding: 1vh;
+	margin: 0;
+}
+
+/*	Text	*/
+p {
+	padding: 1.5vh;
+	margin: 0;
+}
+
+.tx-al-l {
+	text-align: left;
+}
+
+.tx-al-c {
+	text-align: center;
+}
+
+.tx-al-r {
+	text-align: right;
+}
+
+.tx-al-j {
+	text-align: justify;
+}
+
+mark {
+	background-color: white;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/*	Boxes	*/
+nav {
+	background-color: black;
+	font-size: 2.5vh;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  position: sticky;
+	top: 0;
+	background-color: black;
+	z-index:1;
+}
+
+nav > a {
+	width: 10%;
+}
+
+.border-w {
+	border: solid white;
+	color: white;
+}
+
+.showdown {
+	display: grid;
+	grid-template-columns: 25% 25% 25%;
+	margin: 1%;
+	grid-auto-rows: 400px;
+	justify-content: center;
+}
+
+.hw-block {
+ 	transform: skew(-5deg, 0);
+	margin: 5%;
+	background-color: black;
+	transition: all .2s ease;
+}
+.hw-block:hover {
+ 	transform: skew(-5deg, 0) scale(110%);
+}
+.hw-block > img {
+	 height: 60%;
+	 width: 100%;
+	 object-fit: cover;
+}
+.hw-block > .numero {
+	 position: absolute;
+	 right: 0;
+	 top: 0;
+}
+.hw-block > .tipo {
+	 padding: 0 10px;
+	 position: absolute;
+	 bottom: 0;
+}
+.hw-block > .fecha {
+	 padding: 1px 10px;
+	 position: absolute;
+	 bottom: 0;
+	 right: 0;
+}
+
+.flex {
+	display: flex;
+}
+
+.hw-header {
+	display: grid;
+	grid-template-columns: 25% 50% 25%;
+}
+.hw-header > img {
+	width: 30%;
+	object-fit: contain;
+}
+
+.contact-box {
+	writing-mode: vertical-rl;
+	align-items: center;
+	justify-content: center;
+}
+
+.pptx {
+	position: relative;
+	width: 80%;
+	height: auto;
+	overflow: hidden;
+	will-change: transform;
+}
+
+/* Buttons	*/
+button {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background-color: transparent;
+	border: 0.2vh solid white;
+	padding: 1vh;
+}
+button:hover {
+	color: black;
+	background-color: white;
+	transform: none;
+	cursor: crosshair;
+}
+button:active {
+	color: inherit;
+	background-color: transparent;
+	border: 0.2vh solid white;
+}
