@@ -204,7 +204,7 @@
 		        // predict can take in an image, video or canvas html element
 		        const prediction = await model.predict(webcam.canvas);
 		        for (let i = 0; i < maxPredictions; i++) {
-	            const classPrediction = prediction[i].probability.toFixed(2)*100 + "% " + prediction[i].className;
+	            const classPrediction = (prediction[i].probability*100).toFixed(2) + "% " + prediction[i].className;
 							if (prediction[i].probability.toFixed(2) > 0.1) {
             		labelContainer.childNodes[i].innerHTML = classPrediction;
 								if (prediction[i].probability > prediction[mostPossible].probability) {
@@ -213,12 +213,16 @@
 							} else {
 								labelContainer.childNodes[i].innerHTML = "";
 							}
-							widthCol = widthCol + prediction[i].probability.toFixed(2)*100 + "% ";
+							widthCol = widthCol + (prediction[i].probability*100).toFixed(2) + "% ";
 		        }
 						labelContainer.style.gridTemplateColumns = widthCol;
 						identified.innerHTML = prediction[mostPossible].className;
 			    }
 			</script>
+			<p>
+				La IA es capaz de diferenciar gorras, plantas, animales, máquinas, dibujos y personas que se encuentren
+				suficientemente lejanas para poder visualizarlas en aproximadamente, un 30% de la imagen.
+			</p>
 			<h2>Fuentes</h2>
 			International Standarization Organization. <i>La historia de la inteligencia artificial: ¿quién inventó la IA?</i>
 			<a href="https://www.iso.org/es/inteligencia-artificial/que-es-ia" target="_blank">
